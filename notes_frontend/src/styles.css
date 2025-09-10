@@ -1,0 +1,120 @@
+:root {
+  --border: #e5e5e5;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --bg-subtle: #fafafa;
+  --primary: #2563eb;
+  --primary-600: #2563eb;
+  --primary-700: #1d4ed8;
+  --danger: #dc2626;
+  --danger-700: #b91c1c;
+}
+
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body { margin: 0; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background: var(--bg); color: #111827; }
+
+/* Minimal utility classes mimicking used ones */
+.h-full { height: 100%; }
+.w-full { width: 100%; }
+.bg-white { background: #fff; }
+.border { border: 1px solid var(--border); }
+.border-t { border-top: 1px solid var(--border); }
+.border-b { border-bottom: 1px solid var(--border); }
+.border-r { border-right: 1px solid var(--border); }
+.border-neutral-200 { border-color: var(--border); }
+.bg-neutral-100 { background: #f5f5f5; }
+.text-neutral-900 { color: #111827; }
+.text-neutral-800 { color: #1f2937; }
+.text-neutral-700 { color: #374151; }
+.text-neutral-600 { color: #4b5563; }
+.text-neutral-500 { color: #6b7280; }
+.text-blue-700 { color: #1d4ed8; }
+
+.text-lg { font-size: 1.125rem; }
+.text-xl { font-size: 1.25rem; }
+.text-sm { font-size: .875rem; }
+.text-xs { font-size: .75rem; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+.tracking-tight { letter-spacing: -0.01em; }
+
+.rounded-md { border-radius: .375rem; }
+.px-3 { padding-left: .75rem; padding-right: .75rem; }
+.py-1\.5 { padding-top: .375rem; padding-bottom: .375rem; }
+.py-2 { padding-top: .5rem; padding-bottom: .5rem; }
+.py-3 { padding-top: .75rem; padding-bottom: .75rem; }
+.px-4 { padding-left: 1rem; padding-right: 1rem; }
+.py-4 { padding-top: 1rem; padding-bottom: 1rem; }
+.p-4 { padding: 1rem; }
+.p-8 { padding: 2rem; }
+.mt-2 { margin-top: .5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-2 { margin-bottom: .5rem; }
+.gap-1 { gap: .25rem; }
+.gap-2 { gap: .5rem; }
+.gap-3 { gap: .75rem; }
+.gap-4 { gap: 1rem; }
+.ml-2 { margin-left: .5rem; }
+
+.flex { display: flex; }
+.grid { display: grid; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.min-w-0 { min-width: 0; }
+.text-center { text-align: center; }
+
+.grid-rows-\[auto,1fr] { grid-template-rows: auto 1fr; }
+.grid-cols-\[320px,1fr] { grid-template-columns: 320px 1fr; }
+.grid-cols-\[1fr,auto] { grid-template-columns: 1fr auto; }
+
+.overflow-auto { overflow: auto; }
+
+.divide-y > :not([hidden]) ~ :not([hidden]) { border-top: 1px solid var(--border); }
+.divide-neutral-200 > :not([hidden]) ~ :not([hidden]) { border-color: var(--border); }
+
+.inline-flex { display: inline-flex; }
+.cursor-pointer { cursor: pointer; }
+.rounded-full { border-radius: 9999px; }
+
+.transition-colors { transition: background-color .15s ease, color .15s ease, border-color .15s ease; }
+.transition-opacity { transition: opacity .15s ease; }
+.opacity-0 { opacity: 0; }
+.opacity-100 { opacity: 1; }
+
+.focus\:outline-none:focus { outline: none; }
+.focus\:ring-2:focus { box-shadow: 0 0 0 2px rgba(37,99,235,.35); }
+.focus\:ring-blue-400:focus { box-shadow: 0 0 0 2px rgba(96,165,250,.8); }
+.focus\:ring-neutral-300:focus { box-shadow: 0 0 0 2px rgba(209,213,219,.9); }
+.focus\:ring-red-400:focus { box-shadow: 0 0 0 2px rgba(248,113,113,.8); }
+.focus\:ring-offset-2:focus { outline-offset: 2px; }
+
+.bg-blue-50 { background: #eff6ff; }
+.bg-neutral-50 { background: #fafafa; }
+.bg-blue-600 { background: var(--primary-600); }
+.hover\:bg-blue-700:hover { background: var(--primary-700); }
+.bg-neutral-200 { background: #e5e7eb; }
+.hover\:bg-neutral-300:hover { background: #d1d5db; }
+.bg-transparent { background: transparent; }
+.hover\:bg-neutral-100:hover { background: #f5f5f5; }
+.bg-red-600 { background: var(--danger); }
+.hover\:bg-red-700:hover { background: var(--danger-700); }
+
+.text-white { color: #fff; }
+
+.ring-offset-white { outline-color: #fff; }
+
+.disabled\:opacity-60:disabled { opacity: .6; }
+.disabled\:cursor-not-allowed:disabled { cursor: not-allowed; }
+
+.group { }
+.group-hover\:opacity-100 { }
+.group:hover .group-hover\:opacity-100 { opacity: 1; }
+
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.min-h-\[180px] { min-height: 180px; }
+.min-h-\[320px] { min-height: 320px; }
+.resize-vertical { resize: vertical; }
+
+.font-mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }

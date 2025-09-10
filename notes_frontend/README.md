@@ -1,41 +1,50 @@
-# Remotion video
+# Remotion video + Simple Notes Manager
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-dark.gif">
-      <img alt="Animated Remotion Logo" src="https://github.com/remotion-dev/logo/raw/main/animated-logo-banner-light.gif">
-    </picture>
-  </a>
-</p>
+Welcome to your Remotion project enhanced with a Notes Manager UI.
 
-Welcome to your Remotion project!
+What you get:
+- A Remotion project with the usual sample compositions.
+- A fully functional Notes Manager UI (CRUD) mounted in Remotion Studio as a Composition: `NotesAppUI`.
+- Notes are persisted to `localStorage` (mocked persistence).
 
 ## Commands
 
-**Install Dependencies**
-
+Install dependencies
 ```console
 npm i
 ```
 
-**Start Preview**
-
+Start Remotion Studio (preview + Notes UI)
 ```console
 npm run dev
 ```
+In the Studio sidebar, select `NotesAppUI` to open the Notes interface. You can interact with it like a typical web app.
 
-**Render video**
-
+Render a video (not needed for Notes UI)
 ```console
 npx remotion render
 ```
 
-**Upgrade Remotion**
-
+Upgrade Remotion
 ```console
 npx remotion upgrade
 ```
+
+## Notes UI usage
+
+- Create a new note using the "New note" button in the header.
+- Select a note in the left sidebar to view or edit.
+- Edit title and content; press Save or use Ctrl/Cmd+Enter to save quickly.
+- Delete a note using the delete button in the list or in the editor toolbar.
+- Search box filters notes client-side by title or content.
+- State is automatically saved in your browser via localStorage.
+
+## Project structure
+
+- `src/notes` — domain types, storage (localStorage), and a tiny store with subscriptions.
+- `src/components/notes` — UI components for the Notes app (list, editor, shell).
+- `src/NotesPage.tsx` — Remotion-friendly wrapper to host the Notes UI in Studio.
+- `src/styles.css` — Minimal utility CSS (no Tailwind dependency) used by the UI.
 
 ## Docs
 
